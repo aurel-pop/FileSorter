@@ -24,10 +24,6 @@ for file in files:
         # If it does, move the file into that directory
         shutil.move(path + "/" + file, path + "/" + extension + "/" + file)
     else:
-        # If it doesn't, create a new directory with that name
+        # If it doesn't, create a new directory with that name and move it there
         os.makedirs(path + "/" + extension)
-    
-    # Move the file into the new directory
-    shutil.move(path + "/" + file, path + "/" + extension + "/" + file)
-
-
+        shutil.move(path + "/" + file, path + "/" + extension + "/" + file)
